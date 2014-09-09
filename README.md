@@ -1,4 +1,4 @@
-socialapp
+ShipFam: FamFinder
 =========
 
-FB app
+Placeholder until ready ready for initial commit.
