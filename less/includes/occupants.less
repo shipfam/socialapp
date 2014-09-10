@@ -1,0 +1,30 @@
+//occupants
+.occupant {
+	.clearfix();
+	background: #FFF;
+	border-bottom: 1px solid #ccc;
+	cursor: pointer;
+	padding: 1rem;
+	text-align: left;
+	transition: background @transition-time ease-in-out; 
+	&:hover {
+		background: fade(@blue, 10%);
+	}
+	.profile-pic {
+		.left();
+		margin-right: 1rem;
+	}
+	.profile-info {
+		.left();
+	}
+	.name {
+		color: #333;
+		display: block;
+		font-size: 2rem;
+		font-style: normal;
+	}
+	a {
+		display: block;
+		text-decoration: none;
+	}
+}

@@ -1,0 +1,58 @@
+.modal {
+	background: rgba( 0, 0, 0, 0.75 );
+	cursor: pointer;
+	display: table;
+	height: 100%;
+	opacity: 0;
+	position: fixed;
+		top: 0;
+		left: 0;
+	transition: opacity @transition-time ease-in-out,
+				visibility @transition-time ease-in-out;
+	visibility: hidden;
+	width: 100%;
+	z-index: @over-layer;
+	&.visible {
+		visibility: visible;
+		opacity: 1;
+	}
+	h1,
+	p {
+		margin: 0 0 2rem;
+	}
+	.modal-container {
+		cursor: pointer;
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+	}
+	.modal-content {
+		background: #FFF;
+		.box-shadow();
+		box-sizing: border-box;
+		cursor: auto;
+		margin: 0 auto;
+		padding: 2rem;
+		text-align: left;
+		width: 100%;
+		max-width: @modal-width;
+	}
+	.modal-close {
+		margin: 0 auto;
+		text-align: right;
+		width: 100%;
+		max-width: @modal-width;
+		a {
+			color: #ccc;
+			font-size: 2.4rem;
+			text-decoration: none;
+			transition: color @transition-time ease-in-out;
+			&:hover {
+				color: #aaa;
+			}
+		}
+	}
+	.fb-login {
+		.btn(@blue, #FFF);
+	}
+}

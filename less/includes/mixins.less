@@ -1,0 +1,41 @@
+.clearfix() {
+	&:before { 
+		content: ''; 
+		display: block;
+	}
+	&:after { 
+		content: '';
+		display: table; 
+		clear: both;
+	}
+}
+
+.fullscreen() {
+	height: 100%;
+	width: 100%;
+}
+
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+
+.box-shadow() {
+	box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.2 );
+}
+
+.btn(@bg, @c) {
+	background: @bg;
+	border: 1px solid @bg;
+	color: @c;
+	display: inline-block;
+	font-size: 2rem;
+	padding: 0.5rem 2rem;
+	text-decoration: none;
+	transition: background @transition-time ease-in-out;
+	&:hover {
+		background: lighten( @bg, 10% );
+	}
+}

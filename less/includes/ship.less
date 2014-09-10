@@ -1,0 +1,98 @@
+//ship
+#ship {
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+	width: 96rem;
+	.popup {
+		animation: popup-animation @transition-time 1 ease-in-out;
+		background: #FFF;
+		border: 1px solid @blue;
+		.box-shadow();
+		cursor: default;
+		margin-left: -15rem;
+		position: absolute;
+			bottom: 3rem;
+			left: 50%;
+		width: 30rem;
+		z-index: @top-layer;
+	}
+	.title {
+		background: @blue;
+		color: #FFF;
+		padding: 1.5rem;
+		.clearfix();
+		span {
+			opacity: 0.8;
+			transition: opacity @transition;
+			&:hover {
+				opacity: 1;
+			}
+		}
+		.close-popup {
+			cursor: pointer;
+			font-size: 2rem;
+			line-height: 0.9;
+		}
+	}
+	.occupants {
+		color: #999;
+		padding: 2rem 0;
+		font-style: italic;
+		text-align: center;
+	}
+	.signup {
+		border-top: 1px solid @blue;
+		text-align: center;
+		a {
+			background: #FFF;
+			color: @blue;
+			display: block;
+			padding: 1rem 0;
+			position: relative;
+			text-decoration: none;
+			transition: background @transition,
+						color @transition;
+			&::before,
+			&::after {
+				border-top: 1rem solid @blue;
+				border-left: 1rem solid transparent;
+				border-right: 1rem solid transparent;
+				content: " ";
+				display: block;
+				height: 0;
+				margin-left: -5px;
+				position: absolute;
+					bottom: -1.1rem;
+					left: 50%;
+				transition: border-top-color @transition-time ease-in-out;
+				width: 0;
+			}
+			&::after {
+				border-top-color: #FFF;
+				bottom: -1rem;
+			}
+			&:hover {
+				background: @blue;
+				color: #FFF;
+				&::before {
+					border-top-color: #FFF;
+				}
+				&::after {
+					border-top-color: @blue;
+				}
+			}
+		}
+	}
+}
+
+.fb-login {
+	opacity: 1;
+	transition: opacity @transition-time ease-in-out,
+				visibility @transition-time ease-in-out;
+	visibility: visible;
+	&.logged-in {
+		opacity: 0;
+		visibility: hidden;
+	}
+}

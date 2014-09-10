@@ -1,0 +1,35 @@
+//colour 
+@blue: #0082BB;
+
+
+//transitions
+@transition-time: 0.15s;
+@transition: @transition-time + ~"ease-in-out";
+
+
+//screen sizes
+@small: ~"only screen and (min-width: 480px)";
+@medium: ~"only screen and (min-width: 960px)";
+@large: ~"only screen and (min-width: 1200px)";
+
+//z-index
+@over-layer: 1000;
+@top-layer: 10;
+@mid-layer: 5;
+@bot-layer: 1;
+
+//widths
+@max-width: 96rem;
+@modal-width: @max-width/2;
+
+//animations 
+@keyframes popup-animation {
+  0%   { 
+  	bottom: 0rem;
+  	opacity: 0;
+  }
+  100% {
+  	bottom: 3rem;
+  	opacity: 1;
+  }
+}
