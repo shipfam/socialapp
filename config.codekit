@@ -38,7 +38,7 @@
 		"outputAbbreviatedPath": "\/apple-touch-icon-precomposed.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/css\/main.css": {
 		"fileType": 16,
@@ -58,7 +58,7 @@
 		"outputAbbreviatedPath": "\/img\/decks\/10.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/img\/decks\/11.jpg": {
 		"fileType": 16384,
@@ -69,7 +69,7 @@
 		"outputAbbreviatedPath": "\/img\/decks\/11.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/img\/decks\/12.jpg": {
 		"fileType": 16384,
@@ -80,7 +80,7 @@
 		"outputAbbreviatedPath": "\/img\/decks\/12.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/img\/decks\/13.jpg": {
 		"fileType": 16384,
@@ -91,7 +91,7 @@
 		"outputAbbreviatedPath": "\/img\/decks\/13.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/img\/decks\/5.jpg": {
 		"fileType": 16384,
@@ -102,7 +102,7 @@
 		"outputAbbreviatedPath": "\/img\/decks\/5.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/img\/decks\/8.jpg": {
 		"fileType": 16384,
@@ -113,7 +113,7 @@
 		"outputAbbreviatedPath": "\/img\/decks\/8.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/img\/decks\/9.jpg": {
 		"fileType": 16384,
@@ -124,7 +124,7 @@
 		"outputAbbreviatedPath": "\/img\/decks\/9.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/img\/thumbnail.jpg": {
 		"fileType": 16384,
@@ -135,7 +135,7 @@
 		"outputAbbreviatedPath": "\/img\/thumbnail.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/index.php": {
 		"fileType": 8192,
@@ -760,8 +760,8 @@
 		"enableSmartyPants": 1,
 		"expandTabs": 1,
 		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/README.md",
 		"outputAbbreviatedPath": "\/README.html",
 		"outputPathIsOutsideProject": 0,
