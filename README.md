@@ -1,4 +1,4 @@
 ShipFam: FamFinder
 =========
 
-Placeholder until ready ready for initial commit.
+This is indeed a readme file....more to come.
