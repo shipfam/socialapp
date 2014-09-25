@@ -17,6 +17,7 @@
 		<?php # Scripts ?>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/lib/jquery/jquery-2.1.1.js"><\/script>')</script>
+		<script src="js/lib/utils/fastclick.js"></script>
 		<script src="js/main.min.js"></script>
 		<script>
 			(function(ma,de,wi,th,mo,jo){ma.GoogleAnalyticsObject=th;ma[th]||(ma[th]=

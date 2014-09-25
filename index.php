@@ -6,12 +6,15 @@
 		echo "Failed to connect to MySQL: (" . $db->connect_errno . ") " . $db->connect_error;
 	}
 	else {
+		# Load our decks
 		$query = "SELECT * FROM `decks` ORDER BY `deck` ASC";
 		$result = $mysqli->query($query);
 		while ( $deck = $result->fetch_array( MYSQLI_ASSOC ) ) {
 			$decks[] = $deck[deck];
 		}
 		$result->close();
+		
+		# Load our rooms
 		$query = "SELECT * FROM `rooms`";
 		$result = $mysqli->query($query);
 		while ( $room = $result->fetch_array( MYSQLI_ASSOC ) ) {
@@ -19,7 +22,8 @@
 				"room"=>$room[room],
 				"deck"=>$room[deck],
 				"adjacent"=>$room[adjacent],
-				"points"=>$room[points]
+				"points"=>$room[points],
+				"occupied"=>$room[occupants]
 			];
 		}
 		$result->close();

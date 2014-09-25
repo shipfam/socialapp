@@ -25,7 +25,7 @@
 		?>
 		</ul>
 	</nav>
-	<a href="#" onclick="app.facebook.utils.login();" class="fb-login">Login here</a>
+	<a href="#" class="fb-login">Login here</a>
 	<div id="legend">
 		<h1>Legend</h1>
 		<ul class="nav-legend">

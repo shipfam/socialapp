@@ -1,16 +1,3 @@
-//rooms
-@import "_decks/deck-5";
-@import "_decks/deck-6";
-@import "_decks/deck-7";
-@import "_decks/deck-8";
-@import "_decks/deck-9";
-@import "_decks/deck-10";
-@import "_decks/deck-11";
-@import "_decks/deck-12";
-@import "_decks/deck-13";
-@import "_decks/deck-14";
-@import "_decks/deck-16";
-
 .room-container {
 	cursor: pointer;
 	display: inline-block;
@@ -40,7 +27,8 @@
 		transition: color @transition-time ease-in-out;
 		z-index: @bot-layer;
 	}
-	&:hover {
+	&:hover,
+	&.active-room {
 		.room {
 			fill: @blue;
 		}
@@ -49,3 +37,12 @@
 		}
 	}
 }
+//rooms
+@import "_decks/deck-5";
+@import "_decks/deck-8";
+@import "_decks/deck-9";
+@import "_decks/deck-10";
+@import "_decks/deck-11";
+@import "_decks/deck-12";
+@import "_decks/deck-13";
+

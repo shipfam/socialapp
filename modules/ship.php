@@ -1,5 +1,19 @@
 <div id="ship">
 <?php
+	# I can't remember why this is here...
+	# Probably so Deck 5 is 'active'
+	# Refactor later...
+	#
+	# !-Todo-!
+	# Make site actually AJAX and not FakeAJAX (FAJAX?)
+	# Should just require limiting the deck based on the url
+	# then use JS to load contents into div#ship. My only
+	# concern is duplicating event handlers on page load
+	# and having to re-init on every load...
+	# maybe it's not worth it. Might be best to just 
+	# throw the app at the client and let it handle all
+	# the info...negligible difference in load times
+	# and saves our server from a lot of grunt work.
 	$count = 0;
 	foreach ( $decks as $deck ):
 		$visible_deck = ( $count === 0 ) ? "visible-deck" : "";
@@ -9,6 +23,7 @@
 		<h1 class="deck-label">Deck <?php echo $deck; ?></h1>
 	<?php
 		foreach ( $rooms as $room ):
+			
 			$room_deck = $room[deck];
 			$room_number = $room[room];
 			$room_adjacent = $room[adjacent];
