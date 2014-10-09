@@ -22,8 +22,7 @@
 				"room"=>$room[room],
 				"deck"=>$room[deck],
 				"adjacent"=>$room[adjacent],
-				"points"=>$room[points],
-				"occupied"=>$room[occupants]
+				"points"=>$room[points]
 			];
 		}
 		$result->close();

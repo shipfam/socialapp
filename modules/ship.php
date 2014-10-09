@@ -31,8 +31,8 @@
 			
 			if ( $room_deck === $deck ):
 	?>
-			<div id="<?php echo "room-" . $room_number; ?>" class="room-container" data-room="<?php echo $room_number; ?>" data-deck="<?php echo $room_deck; ?>" data-adjacent="<?php echo $room_adjacent; ?>" title="Click for more information">
-				<svg xmlns="http://www.w3.org/2000/svg">
+			<div id="<?php echo "room-" . $room_number; ?>" class="room-container" data-room="<?php echo $room_number; ?>" data-deck="<?php echo $room_deck; ?>" data-adjacent="<?php echo $room_adjacent; ?>">
+				<svg xmlns="http://www.w3.org/2000/svg" title="Click for more info	">
 					<polygon class="room" points="<?php echo $room_points; ?>"></polygon>
 				</svg>
 				<label><?php echo $room_number; ?></label>

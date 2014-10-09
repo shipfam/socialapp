@@ -15,6 +15,7 @@
 		init: function() {
 			this.facebook.init();
 			this.nav.init();
+			this.cpanel.init();
 			this.ship.init();
 		}, // app.init()
 		// basic options
@@ -152,7 +153,7 @@
 				}
 				
 				return false;
-			},
+			},// app.ship.nav.hash();
 			events: function() {
 				// self marks app.nav for scope reasons.
 				var self = this;
@@ -163,6 +164,11 @@
 				}, false);
 			}// app.ship.nav.events();
 		},// app.ship.nav {}
+		cpanel: {
+			init: function() {
+				
+			}
+		},// app.cpanel{};
 		ship: {
 			init: function() {
 				this.occupants.init();
@@ -222,19 +228,33 @@
 					
 				}, //app.ship.occupants.get()
 				constructors: {
-					occupant: function(obj) {
-						var html = "<div id='occupant-" + obj.acct.id + "' class='occupant'>" +
+					occupant: function(params) {
+						var html = "<div id='occupant-" + params.acct.id + "' class='occupant'>" +
 										"<div class='profile-pic'>" +
-											"<img src='" + obj.img.url + "' alt='" + obj.acct.name + "' />" +
+											"<img src='" + params.img.url + "' alt='" + params.acct.name + "' />" +
 										"</div>" +
 										"<div class='profile-info'>" +
 											"<span class='name'>" +
-												obj.acct.name +
+												params.acct.name +
 											"</span>" +
-											"<a href='https://www.facebook.com/" + obj.acct.id + "' title='View profile' target='_blank'>View Profile</a>" +
+											"<a href='https://www.facebook.com/" + params.acct.id + "' title='View profile' target='_blank'>View Profile</a>" +
 										"</div>" +
 									"</div>";
 						$(".occupants").append(html);
+					},
+					popup: function($el, params) {
+						var html = "<div class='popup' title=''>" +
+										"<div class='title'>" +
+											"<span class='left' title='Deck: " + params.deck + ", Room: " + params.room + "'>L" + params.deck + "-R" + params.room + "</span>" +
+											"<span class='right close-popup' title='Close'>&times;</span>" +
+										"</div>" +
+										"<div class='occupants no-occupants'>No occupants</div>" +
+										"<div class='signup'>"+
+											"<a href='#' class='occupy' data-room='" + params.room + "' data-deck='" + params.deck + "'>Occupy this room</a>" +
+										"</div>"+
+									"</div>";
+						
+						$el.append(html);
 					}
 				}, // app.ship.occupants.constructor();
 				events: function() {
@@ -246,28 +266,21 @@
 						var $this         = $(this);
 						var room          = $this.data("room");
 						var deck          = $this.data("deck");
+						var popup         
 						var params = {
 							room: room,
 							deck: deck,
 							date: app.opts.date
 						};
-						var popup         = "<div class='popup' title=''>" +
-												"<div class='title'>" +
-													"<span class='left' title='Deck: " + deck + ", Room: " + room + "'>L" + deck + "-R" + room + "</span>" +
-													"<span class='right close-popup' title='Close'>&times;</span>" +
-												"</div>" +
-												"<div class='occupants no-occupants'>No occupants</div>" +
-												"<div class='signup'>"+
-													"<a href='#' class='occupy' data-room='" + room + "' data-deck='" + deck + "'>Occupy this room</a>" +
-												"</div>"+
-											"</div>";
+						
 						$(".popup").remove();
 						$(".active-room").removeClass("active-room");
 						$this.addClass("active-room");
 						$this.append(popup);
+						self.constructors.popup($this, params);
 						self.get(params);
 						
-						$(".popup").on("click", function(evt) {
+						$(".popup").on("click", function() {
 							// prevent bubbling
 							return false;
 						});
