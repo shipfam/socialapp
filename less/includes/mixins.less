@@ -39,3 +39,11 @@
 		background: lighten( @bg, 10% );
 	}
 }
+
+.rotate-room(@top, @left) {
+	label { 
+		top: @top;
+		left: @left;
+		transform: rotate(-90deg);
+	}
+}

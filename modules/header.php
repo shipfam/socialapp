@@ -14,13 +14,13 @@
 		
 		<!-- Facebook Meta -->
 		<meta property="og:title" content="ShipFamFinder" />
-		<meta property="og:type" content="website"/> <!-- blog|website|article -->
+		<meta property="og:type" content="website"/>
 		<meta property="og:url" content="<?php echo $host; ?>"/>
 		<meta property="og:description" content="Use this service to find out who your ShipFam Neighbours will be on Holy Ship 2015"/>
 		<meta property="fb:admins" content="439096929566495"/>
 		
 		<!-- Twitter Meta -->
-		<meta name="twitter:card" content="summary"> <!-- summary|photo|player -->
+		<meta name="twitter:card" content="summary">
 		<meta name="twitter:url" content="<?php echo $host; ?>">
 		<meta name="twitter:title" content="ShipFamFinder">
 		<meta name="twitter:description" content="Use this service to find out who your ShipFam Neighbours will be on Holy Ship 2015">
